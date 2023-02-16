@@ -1,0 +1,25 @@
+<ion-header>
+	<ion-toolbar color="primary">
+		<ion-icon name="return-down-back-outline"  slot="start" (click)="back()"></ion-icon>
+		<ion-title> My Profile </ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<div class="example-content">
+	<div class="preview">
+		<ion-avatar (click)="changeImage()">
+			<img *ngIf="profile?.['imageUrl']; else placheolder_avatar;" [src]="profile?.['imageUrl']" />
+			<ng-template #placheolder_avatar>
+				<div class="fallback">
+					<p>Select avatar</p>
+				</div>
+			</ng-template>
+		</ion-avatar>
+	</div>
+
+
+	
+</div>
+</ion-content>
+

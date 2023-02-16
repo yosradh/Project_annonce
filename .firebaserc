@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "annonces-37ef1": {
+      "hosting": {
+        "app": [
+          "annonces-37ef1"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "annonces-37ef1"
+  }
+}

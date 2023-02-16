@@ -1,0 +1,6 @@
+<ion-card *ngFor="let image of images">
+  <ion-img [src]="image.url"></ion-img>
+  <ion-card-header>
+    <ion-card-subtitle>{{ image }}</ion-card-subtitle>
+  </ion-card-header>
+</ion-card>

@@ -1,0 +1,23 @@
+<form #articleForm="ngForm" (ngSubmit)="addItem(articleForm)">
+  <ion-item>
+    <ion-label position="stacked">Nom de l'article</ion-label>
+    <ion-input type="text" name="title" ngModel required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Description de l'article</ion-label>
+    <ion-textarea name="description" ngModel required></ion-textarea>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">prix</ion-label>
+    <ion-input name="prix" ngModel required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Photo de l'article</ion-label>
+    <ion-input type="file" (change)="onFileSelected($event)" name="photo" accept="image/*" required></ion-input>
+  </ion-item>
+
+  <ion-button type="submit" [disabled]="!articleForm.valid">Ajouter l'article</ion-button>
+</form>
